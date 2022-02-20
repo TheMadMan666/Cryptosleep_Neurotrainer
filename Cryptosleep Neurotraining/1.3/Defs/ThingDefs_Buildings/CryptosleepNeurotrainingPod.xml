@@ -35,7 +35,7 @@
     <size>(2,2)</size>
     <designationCategory>Misc</designationCategory>
     <hasInteractionCell>true</hasInteractionCell>
-    <interactionCellOffset>(2,0,0)</interactionCellOffset>
+    <interactionCellOffset>(-1,0,0)</interactionCellOffset>
     <comps>
       <li Class="CompProperties_Power">
 <!-- Power consumption varies 100 Watt when idle, 600 watt when a persons s inside and training. Needs xml outlets. -->
@@ -88,7 +88,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(2,3)</drawSize>
     </graphicData>
-    <uiIconScale>0.85</uiIconScale>
+    <uiIconScale>0.75</uiIconScale>
     <researchPrerequisites>
 		<li>MM_EnhancedCryptosleepNeurotraining</li>
 	</researchPrerequisites>
@@ -138,6 +138,7 @@
     <placeWorkers>
       <li>PlaceWorker_ShowFacilitiesConnections</li>
     </placeWorkers>
+	<defaultPlacingRot>East</defaultPlacingRot>
     <constructionSkillPrerequisite>12</constructionSkillPrerequisite>
   </ThingDef>
 

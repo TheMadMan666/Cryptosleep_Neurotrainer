@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Fun surprises for people who yank their pawns out of neurotraining early or lose power to cryptosleep neurotraining pods -->
+
+<!-- Learning cycle buff -->
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MM_LearningBuff</defName>
+    <label>enhanced memory</label>
+    <description>This pawn passed a full memory enhancement cycle in a cryptosleep neurotrainer - under its effects pawns's memory is temporarily improved. This will make learning skills much easier as if remembering them instead and prevent skill decay.</description>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>180000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+          <GlobalLearningFactor>0.35</GlobalLearningFactor>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+<!-- Splitting headache just like after 24 hours of uninterrupted work. Now pawns can enjoy it too! -->
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MM_Headache</defName>
+    <label>headache</label>
+    <description>A particularly long or interrupted cryptosleep neurotraining cycle has caused terrific migraines which are affecting pawn’s consciousness, mood and overall efficiency.</description>
+	<makesSickThought>true</makesSickThought>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+	    <statOffsets>
+          <GlobalLearningFactor>-0.3</GlobalLearningFactor>
+        </statOffsets>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>MM_HeadHurtThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>MM_Headache</hediff>
+    <stages>
+      <li>
+        <label>My head is killing me</label>
+        <description>My head hurts so much, i can't even think.</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+<!-- Temporary blindness. See no evil. -->
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MM_Blindness</defName>
+    <label>temporary blindness</label>
+    <description>A particularly long or interrupted cryptosleep neurotraining cycle has caused neural signals responsible for sight to temporarily stop reaching the brain.</description>
+	<makesSickThought>true</makesSickThought>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <postFactor>0</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+<!-- Disorientation. Was that shitter always that far away? Really? -->
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MM_Disorientation</defName>
+    <label>disorientation</label>
+    <description>A particularly long or interrupted cryptosleep neurotraining cycle has caused a temporary disorientation, slowing a pawn down and causing periodic vomiting from a constant vertigo.</description>
+	<makesSickThought>true</makesSickThought>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+		<vomitMtbDays>0.15</vomitMtbDays>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.5</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+<!-- Impaired coordination - left hand doesn't know which ball right one is scratching. -->
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MM_ImpairedCoordination</defName>
+    <label>impaired coordination</label>
+    <description>A particularly long or interrupted cryptosleep neurotraining cycle temporarily impaired muscle coordination.</description>
+	<makesSickThought>true</makesSickThought>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+		<restFallFactorOffset>0.5</restFallFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <postFactor>0.5</postFactor>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <postFactor>0.8</postFactor>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>MM_Hallucinations</defName>
+    <label>hallucinating</label>
+    <description>A particularly long or interrupted cryptosleep neurotraining cycle has caused the pawn to periodically hallucinate, seeing vivid realistic dreams while awake.</description>
+	<makesSickThought>true</makesSickThought>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <mentalStateGivers>
+          <li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>0.4</mtbDays>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

@@ -11,8 +11,8 @@
 		<prerequisites>
 			<li>ShipCryptosleep</li>
 		</prerequisites>
-		<researchViewX>1.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+		<researchViewX>20.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -24,8 +24,8 @@
 		<prerequisites>
 			<li>MM_CryptoSleepNeuroTraining</li>
 		</prerequisites>
-		<researchViewX>11.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+		<researchViewX>21.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
 	</ResearchProjectDef>
 
 	<ResearchProjectDef>
@@ -37,8 +37,8 @@
 		<prerequisites>
 			<li>MM_EnhancedCryptosleepNeurotraining</li>
 		</prerequisites>
-		<researchViewX>12.00</researchViewX>
-		<researchViewY>6.00</researchViewY>
+		<researchViewX>22.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
 	</ResearchProjectDef>
 
 </Defs>
