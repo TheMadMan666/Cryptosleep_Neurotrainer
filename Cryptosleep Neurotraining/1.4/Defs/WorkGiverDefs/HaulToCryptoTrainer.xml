@@ -1,0 +1,14 @@
+<Defs>
+<WorkGiverDef>
+    <defName>HaulToCryptoTrainer</defName>
+    <label>carry to cyrpto sleep trainer</label>
+    <giverClass>MadmanSleepTrainer.WorkGiver_HaulToCryptoTrainer</giverClass>
+    <workType>Hauling</workType>
+    <verb>fill</verb>
+    <gerund>filling</gerund>
+    <priorityInType>109</priorityInType>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+  </WorkGiverDef>
+  </Defs>

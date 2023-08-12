@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!--===================== Research for cryptosleep neurotraining ======================-->
+	<ResearchProjectDef>
+		<defName>MM_CryptoSleepNeuroTraining</defName>
+		<label>cryptosleep neurotraining technology</label>
+		<description>Expand your knowledge about cryptosleep state and its effects on human mind and body. Learn how to use it for effective pawn training.</description>
+		<baseCost>2000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<prerequisites>
+			<li>ShipCryptosleep</li>
+		</prerequisites>
+		<researchViewX>20.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>MM_EnhancedCryptosleepNeurotraining</defName>
+		<label>enhanced cryptosleep neurotraining</label>
+		<description>Experiment with boosting your cryptosleep neurotraining pod processing power by connecting it to external server clusters that can speed up infromation transfer rates.</description>
+		<baseCost>1500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>MM_CryptoSleepNeuroTraining</li>
+		</prerequisites>
+		<researchViewX>21.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+
+	<ResearchProjectDef>
+		<defName>MM_CryptosleepLearningBoost</defName>
+		<label>learning enhancement cryptosleep cycle</label>
+		<description>Advanced knowledge about properties of cryptosleep allows to tune your cryptosleep neurotraining pod to enhance learning ability of anyone who successfully finishes a special cryptosleep cycle.</description>
+		<baseCost>1000</baseCost>
+		<techLevel>Spacer</techLevel>
+		<prerequisites>
+			<li>MM_EnhancedCryptosleepNeurotraining</li>
+		</prerequisites>
+		<researchViewX>22.00</researchViewX>
+		<researchViewY>2.20</researchViewY>
+	</ResearchProjectDef>
+
+</Defs>
